@@ -25,4 +25,4 @@ EOF
 1. Create the deployment: `kubectl create deployment jungle --image=wesreisz/thejungle:latest`
 1. Expose the app/create the svc: `kubectl expose deployment jungle --port=80 --targetport=3000`
 
-or [use a yaml file]
+or [use a yaml file](https://github.com/wesreisz/demos/tree/master/yaml)
