@@ -1,8 +1,12 @@
-# Demo Tanzu Build Service (AKS Cluster)
+# Demo Tanzu Build Service 
 PURPOSE: Setup a repo that is has a quick, repeatable process to demo TBS. This example uses AKS for the cluster.
 
 This blog references a good walk through of TBS: 
 https://tanzu.vmware.com/content/blog/getting-started-with-vmware-tanzu-build-service-1-0
+
+## Create a cluster
+* [Create an AKO cluster](https://github.com/wesreisz/demos/blob/master/aks-create_cluster_cli.md)
+
 
 ## Setup for the Install
 1. Let's steup some variables for reuse: 
