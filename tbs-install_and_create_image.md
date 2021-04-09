@@ -4,15 +4,6 @@ PURPOSE: Setup a repo that is has a quick, repeatable process to demo TBS. This 
 This blog references a good walk through of TBS: 
 https://tanzu.vmware.com/content/blog/getting-started-with-vmware-tanzu-build-service-1-0
 
-
-## Create an AKS cluster using the cli
-1. Sign in to Azure cli: `az login` (`az upgrade` will install the latest).
-1. Create a resource group: `az group create --name tanzu-build-service --location eastus`
-1. Verify Microsoft.OperationsManagement and Microsoft.OperationalInsights are registered on your subscription. To check the registration status: `az provider show -n Microsoft.OperationsManagement -o table` & `az provider show -n Microsoft.OperationalInsights -o table`
-1. Create an AKS cluster: `az aks create --resource-group tanzu-build-service --name tanzu-build-service-cluster --node-count 2 --enable-addons monitoring`
-1. Get your credentials: `az aks get-credentials --resource-group tanzu-build-service --name tanzu-build-service-cluster`
-1. Validate you can connect: `kubectl get nodes`
-
 ## Setup for the Install
 1. Let's steup some variables for reuse: 
 `export DH_USERNAME=<your-docker-hub-username>`
@@ -53,10 +44,6 @@ kp clusterstack list
 ```
 
 ## Build and deploy an MVC dotnet app
-1. Scaffold an app `dotnet new mvc`
-1. Run the app `dotnet run`
-1. push it to github
-1. Create an image:  `kp image create sample-dotnet-app --tag wesreisz/sampleapp-dotnet --namespace dev --cluster-builder default --git https://github.com/wesreisz/sample-app.git --git-revision master --wait`
 
 
 ## Deploy the app
