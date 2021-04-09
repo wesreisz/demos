@@ -43,8 +43,8 @@ kp import -f descriptor-7.yaml
 kp clusterstack list
 ```
 
-## Build and deploy an MVC dotnet app
-
+## Build and deploy an app
+* [Scaffold and run a dotnet app](https://github.com/wesreisz/demos/blob/master/dotnet-build_and_run_scaffolded_app.md)
 
 ## Deploy the app
 1. Create the deployment: `kubectl create deployment jungle --image=wesreisz/thejungle:latest`
