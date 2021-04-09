@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-world-loadbalancer
+  # Assuming that this is the namespace where the supervisor was installed. This is the default in install-supervisor.yaml.
+  namespace: hello-world
+spec:
+  type: LoadBalancer
+  selector:
+    # Assuming that this is how the supervisor pods are labeled. This is the default in install-supervisor.yaml.
+    app: hello-world
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
