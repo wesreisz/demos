@@ -21,4 +21,10 @@
 
 1. Run the app `dotnet run`
 1. push it to github
-1. Create an image:  `kp image create sample-dotnet-app --tag wesreisz/sampleapp-dotnet --namespace dev --cluster-builder default --git https://github.com/wesreisz/sample-app.git --git-revision master --wait`
+1. Create an image:  
+example on docker hub
+`kp image create sample-dotnet-app --tag wesreisz/sampleapp-dotnet --namespace dev --cluster-builder default --git https://github.com/wesreisz/sample-app.git --git-revision master --wait`
+
+example on harbor:
+kp image create sample-dotnet-app --tag harbor.tools.pez.aws.grogscave.net/e2e-workshop-w02-s460/sampleapp-dotnet --cluster-builder demo-cluster-builder --git https://github.com/wesreisz/sample-app.git --git-revision master --wait
+
