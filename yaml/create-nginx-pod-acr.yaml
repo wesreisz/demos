@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-nginx
+spec:
+  containers:
+    - name: my-nginx
+      image: azurealpharegistry.azurecr.io/samples/nginx:1.21 
+      imagePullPolicy: IfNotPresent
+  imagePullSecrets:
+    - name: acr-secret    
